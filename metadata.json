@@ -1,0 +1,6 @@
+{
+  "name": "Binance Futures Sentinel",
+  "description": "A high-performance Python trading bot for Binance Futures Testnet, featuring memory-optimized order execution and strict validation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #0A0B10;
+  --color-brand-ink: #E2E8F0;
+  --color-brand-line: #1E293B;
+  --color-brand-panel: rgba(15, 23, 42, 0.5);
+  --color-brand-emerald: #10B981;
+  --color-brand-rose: #FB7185;
+  --font-brand-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-brand-bg)] text-[var(--color-brand-ink)] font-sans antialiased;
+  }
+}
+
+.bento-card {
+  @apply bg-[var(--color-brand-panel)] border border-[var(--color-brand-line)] rounded-xl overflow-hidden transition-all duration-300;
+}
+
+.bento-card:hover {
+  @apply border-emerald-500/30 bg-slate-900/60;
+}
+
+.data-row {
+  @apply grid grid-cols-[40px_1.5fr_1fr_1fr] p-3 border-b border-white/5 transition-all cursor-pointer hover:bg-white/5;
+}
+
+.col-header {
+  @apply text-[10px] uppercase tracking-widest text-slate-500 font-bold;
+}
+
+.data-value {
+  @apply font-brand-mono tracking-tight text-sm;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
